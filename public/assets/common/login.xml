@@ -1,0 +1,54 @@
+ <LOGIN entity="Person">
+  <CRITERIA>
+    <ANDEXPRESSION derived="false">
+      <EQUALEXPRESSION>
+        <PATH>id</PATH>
+        <VALUE type="Long">$currentUserId</VALUE>
+      </EQUALEXPRESSION>
+    </ANDEXPRESSION>
+  </CRITERIA>
+  <ENTITYSPECS>
+    <ENTITYSPEC name="Person">
+      <PROPERTY path="firstName" type="Name"/>
+      <PROPERTY path="lastName" type="Name"/>
+      <PROPERTY path="authInfo" entityspec="UserAuthInfo"/>
+      <PROPERTY path="displayString"/>
+      <PROPERTY path="version" type="Long"/>
+      <PROPERTY path="id" type="Long"/>
+      <PROPERTY path="displayString"/>
+      <PROPERTY path="version" type="Long"/>
+      <PROPERTY path="id" type="Long"/>
+    </ENTITYSPEC>
+    <ENTITYSPEC name="UserAuthInfo">
+      <PROPERTY path="password" type="Password"/>
+      <PROPERTY path="decryptedPassword" type="String"/>
+      <PROPERTY path="enabled" type="Boolean"/>
+      <PROPERTY path="authRoles" entityspec="AuthRole"/>
+      <PROPERTY path="displayString"/>
+      <PROPERTY path="version" type="Long"/>
+      <PROPERTY path="id" type="Long"/>
+      <PROPERTY path="localePreferences" entityspec="LocalePreference"/>
+      <PROPERTY path="displayString"/>
+      <PROPERTY path="version" type="Long"/>
+      <PROPERTY path="id" type="Long"/>
+    </ENTITYSPEC>
+    <ENTITYSPEC name="LocalePreference">
+      <PROPERTY path="locality" type="String" displayexpression="name"/>
+      <PROPERTY path="locality.code" type="String"/>
+      <PROPERTY path="isDefault" type="Boolean"/>
+      <PROPERTY path="displayString"/>
+      <PROPERTY path="version" type="Long"/>
+      <PROPERTY path="id" type="Long"/>
+    </ENTITYSPEC>
+    <ENTITYSPEC name="AuthRole">
+      <PROPERTY path="id"/>
+      <PROPERTY path="name"/>
+      <PROPERTY path="description" type="String"/>
+      <PROPERTY path="displayString"/>
+      <PROPERTY path="version" type="Long"/>
+      <PROPERTY path="displayString"/>
+      <PROPERTY path="version" type="Long"/>
+      <PROPERTY path="id" type="Long"/>
+    </ENTITYSPEC>
+  </ENTITYSPECS>
+</LOGIN>

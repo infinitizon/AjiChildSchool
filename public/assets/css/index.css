@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('common.css');
+
+body{
+	font-size:80%; font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+	background:#222; padding:0; margin:0;
+}
+img{border:none;}
+#box_holder{
+	margin:auto; background:#DDDDDD; position:relative; top:150px; width:300px; padding:10px;
+	border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px; border:1px solid #FFF;
+	-moz-box-shadow:    3px 3px 20px 10px #000, -3px -3px 20px 10px #000;
+	-webkit-box-shadow: 3px 3px 20px 10px #000, -3px -3px 20px 10px #000;
+	box-shadow:         3px 3px 20px 10px #000, -3px -3px 20px 10px #000;
+}
+label{font-weight:bold;}
+#logo_holder{width:30px; margin:auto; padding:5px;}
+#login_holder{padding:15px; background:#F6F6F6;  border:1px solid #FFF;
+	border-radius:15px; -moz-border-radius:15px; -webkit-border-radius:15px; margin-top:10px;}
+
+.label{text-align:right;}
+.others{ padding:10px 0 0 0; width:200px; margin:auto; font-size:0.85em; font-weight:bold; color:#333; text-shadow:1px 1px 1px #FFF; text-align:center;}
+	.others a{ text-decoration:none; color:#333; text-shadow:1px 1px 1px #FFF; text-align:center;}
+

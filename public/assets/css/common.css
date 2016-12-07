@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+.clear_both{clear: both;}
+
+/**********  Favicons  **********/
+.fa{text-shadow:-1px -1px 1px #D7D7D7;}
+.fa-plus-circle{color:#1D9B72;}
+.fa-pencil-square{color:#31A8DE;}
+.fa-minus-circle{color:#F3554E;}
+/**********  End: Favicons  **********/
+/**********  This will be used for the password strength indicator  **********/
+.passStrength{ width:100%; display:block; margin-bottom:5px; }
+.passDesc{ text-align:center; padding:5px; font:Arial, Helvetica, sans-serif; font-size:0.85em; font-weight:bold; }
+.strength0{ background:#EEEEEE; border:1px solid #CCCCCC; }
+.strength1{	background:#FFA0A0; border:1px solid #F04040; }
+.strength2{ background:#FFB78C; border:1px solid #FF853C; }
+.strength3{ background:#FFEC8B; border:1px solid #FFCC00; }
+.strength4{ background:#C3FF88; border:1px solid #8DFF1C; }
+.strength5{ background:#399800; border:1px solid #FFCC00; }
+/**********  End - Password strength indicator  **********/
+.emphasis{font-weight:bold; color:#CCC;}
+label{ cursor:pointer;}
+.float_right{float:right;}
+
+.login_ctrl{width:100%;height:30px;}
+.text_input_main{width:300px; height:25px;}
+.text_area{width:500px; height:100px;}
+.text_input{ border:1px solid #CCC;
+	border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+	font-stretch:extra-expanded; vertical-align:middle;
+}
+	.text_input:focus{
+		border:1px solid #09F; font-size:150%; color:#666;
+		-moz-box-shadow:    1px 1px 10px 0px #CCC, -1px -1px 10px 0px #CCC;
+		-webkit-box-shadow: 1px 1px 10px 0px #CCC, -1px -1px 10px 0px #CCC;
+		box-shadow:         1px 1px 10px 0px #CCC, -1px -1px 10px 0px #CCC;
+	} 
+.button{ border:1px solid #333; color:#FFF; cursor:pointer; text-decoration:none;
+	border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; padding:3px 10px; text-shadow:-1px -1px 1px #000;
+	/* fallback */
+	background-color: #6D6D6D; background:url(../../../public/home/assets/images/linear_bg_2.png); background-repeat: repeat-x;  
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6D6D6D), to(#222222));	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-linear-gradient(top, #6D6D6D, #222222); 								/* Safari 5.1, Chrome 10+ */ 
+	background: -moz-linear-gradient(top, #6D6D6D, #222222);										/* Firefox 3.6+ */ 
+	background: -ms-linear-gradient(top, #6D6D6D, #222222);										/* IE 10 */ 
+	background: -o-linear-gradient(top, #6D6D6D, #222222);										/* Opera 11.10+ */ 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6D6D6D', endColorstr='#222222'); /* for IE */
+}
+.goodBtn{ padding:3px 10px; text-decoration:none; color:#FFF; text-shadow:1px 1px 1px #000; border:1px solid #039;
+
+			 border-radius:3px;  -moz-border-radius:3px;  -webkit-border-radius:3px;
+			/* fallback */
+			background-color: #06F; background:url(../../../public/home/assets/images/linear_bg_2.png); background-repeat: repeat-x;  
+			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#06F), to(#09F));	/* Safari 4-5, Chrome 1-9 */
+			background: -webkit-linear-gradient(top, #06F, #09F); 								/* Safari 5.1, Chrome 10+ */ 
+			background: -moz-linear-gradient(top, #06F, #09F);										/* Firefox 3.6+ */ 
+			background: -ms-linear-gradient(top, #06F, #09F);										/* IE 10 */ 
+			background: -o-linear-gradient(top, #06F, #09F);										/* Opera 11.10+ */ 
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#06F', endColorstr='#09F'); /* for IE */
+}
+.failBtn{ padding:3px 10px; text-decoration:none; color:#FFF; text-shadow:-1px -1px 1px #000; border:1px solid #900;
+			 border-radius:3px;  -moz-border-radius:3px;  -webkit-border-radius:3px;
+	/* fallback */
+	background-color: #F33; background:url(../../../public/home/assets/images/linear_bg_2.png); background-repeat: repeat-x;  
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F33), to(#F00));	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-linear-gradient(top, #F33, #F00); 								/* Safari 5.1, Chrome 10+ */ 
+	background: -moz-linear-gradient(top, #F33, #F00);										/* Firefox 3.6+ */ 
+	background: -ms-linear-gradient(top, #F33, #F00);										/* IE 10 */ 
+	background: -o-linear-gradient(top, #F33, #F00);										/* Opera 11.10+ */ 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F33', endColorstr='#F00'); /* for IE */
+}
+.genBtn{
+	border:1px solid #999; padding:5px; cursor:pointer; text-shadow:-1px -1px 1px #000; text-decoration:none;
+	border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; -o-border-radius:6px;
+	box-shadow: 0px 3px 5px #000;  -moz-box-shadow: 0px 3px 5px #000;  -webkit-box-shadow: 0px 3px 5px #000;
+	/* fallback */
+	background-color: #CCCCCC;
+	background-repeat: repeat-x;
+	
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999999), to(#CCCCCC));
+	background: -webkit-linear-gradient(top, #CCCCCC 0%, #BBBBBB 25%, #999999 100%);
+	background: -moz-linear-gradient(top, #CCCCCC 0%, #BBBBBB 25%, #999999 100%);
+	background: -ms-linear-gradient(top, #CCCCCC 0%, #BBBBBB 25%, #999999 100%);
+	background: -o-linear-gradient(top, #CCCCCC 0%, #BBBBBB 25%, #999999 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCC', endColorstr='#EEE'); /* for IE */
+}
+.genBtn:hover{                
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999999), to(#CCCCCC));
+	background: -webkit-linear-gradient(top, #CCCCCC 0%, #BBBBBB 75%, #999999 100%);
+	background: -moz-linear-gradient(top, #CCCCCC 0%, #BBBBBB 75%, #999999 100%);
+	background: -ms-linear-gradient(top, #CCCCCC 0%, #BBBBBB 75%, #999999 100%);
+	background: -o-linear-gradient(top, #CCCCCC 0%, #BBBBBB 75%, #999999 100%);
+}
+.genBtn:active{
+	box-shadow:none; -moz-box-shadow:none; -webkit-box-shadow:none;
+	position:relative; top:3px;
+}
+/**********Login stuffs*******************/
+div#notification{ position:fixed; left:30%; width:40%; margin:auto; top:0; background:#FFF; color:#000; padding:10px; z-index:99999;
+	border-bottom-left-radius:5px; -moz-border-bottom-left-radius:5px; -webkit-border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px; -moz-border-bottom-right-radius:5px; -webkit-border-bottom-right-radius:5px;
+}
+	.close{float:right; padding:2px 5px; background:#666; border:1px solid #CCC; cursor:pointer;
+  		border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+	}
+.err{ text-align:center; color:#900; font-weight:bold; font-size:smaller; text-shadow:1px 1px 2px #FFF; padding:5px; text-decoration:none;}
+.success{ text-align:center; color:#09F; font-weight:bold; font-size:smaller; text-shadow:1px 1px 1px #FFF; padding:5px; text-decoration:none;}
+
+/****** Validation Stuffs   ************/
+	.error { background: #f60000; border: 3px solid #d50000; z-index:999999; text-decoration:none; }
+	.correct { background: #56d800; border: 3px solid #008000; font-size:14px; font-weight:bold; z-index:999999; text-decoration:none; }
+	.wrong { font-weight: bold;	color: #e90000; }
+	.normal {font-weight: normal; color: #222; }
+	.info {
+	text-align: left;			padding: 5px;
+	font-size: 11px;			color: #fff;
+	position: absolute;		display: none;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -o-border-radius:5px;
+	-webkit-box-shadow: -1px 1px 2px #a9a9a9; -moz-box-shadow: -1px 1px 2px #a9a9a9; box-shadow: -1px 1px 2px #a9a9a9;
+}
+.align_noreq{ text-align:right;}
+/****** End Validation Stuffs   ************/
+
+/*********  CSS for tables *************/
+table.my_tables{
+	border-collapse: collapse; width:100%; margin:10px 0; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;
+}
+table.my_tables th {
+	background: #828282; 				color: #fff; 
+	font-weight: bold;					line-height: 1.2;
+	padding: 2px 11px;					border-right: 1px solid #fff;
+}
+table.my_tables td {padding:3px 10px;}
+table.my_tables tr.alt td { background: #E0E0E0; }
+table.my_tables tr.over td{ background: #bcd4ec; }
+table.my_tables th:first-child { -moz-border-radius: 6px 0 0 0; -webkit-border-radius: 6px 0 0 0; border-radius: 6px 0 0 0; }
+table.my_tables th:last-child { -moz-border-radius: 0 6px 0 0; -webkit-border-radius: 0 6px 0 0; border-radius: 0 6px 0 0; }
+table.my_tables th:only-child{ -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0;}
+table.my_tables tr:last-child td:first-child{-moz-border-radius:0 0 0 6px;-webkit-border-radius:0 0 0 6px;border-radius:0 0 0 6px; }
+table.my_tables tr:last-child td:last-child{-moz-border-radius:0 0 6px 0;-webkit-border-radius: 0 0 6px 0;border-radius: 0 0 6px 0;}
+input[disabled], select[disabled]{color:#333}
+table.vertColNm td:first-child.vertColNm{ background: #828282; color: #fff; font-weight:bold;}
+table.clickable td{cursor:pointer;}
+/*********  End CSS for tables *************/
+/*********  CSS for table Pagination *************/
+#tablePagination { 
+	background-color: #DCDCDC; 
+	padding: 0px 5px; 
+	height: 25px;
+}
+#tablePagination_paginater { 
+	margin-left: auto; 
+	margin-right: auto;
+}
+#tablePagination img { 
+	padding: 0px 2px; 
+}
+#tablePagination_perPage { 
+	float: left; 
+}
+#tablePagination_paginater { 
+	float: right; 
+}
+/************** Combo Box*************************/
+select.combobox{ width:200px;}
+select.combobox + .combo_in{margin-left: -199px; width: 180px;  border: 0;}
+select.phone{ width:100px;}
+select.phone + .combo_in{margin-left: -99px; width: 80px;  border: 0;}
+/************** Combo Box Ends***********************/
+/************** Badge  ***********************/
+.badge {
+   position:relative;
+}
+.badge[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute; top:-10px;  right:-5px;
+   font-size:.8em;
+   background:#F00; color:white;
+   width:18px; height:18px;
+   text-align:center;  line-height:18px;
+   border-radius:50%;  box-shadow:0 0 1px #333;
+}
+/************** :End Badge  ***********************/

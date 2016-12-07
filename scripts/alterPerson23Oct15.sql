@@ -1,0 +1,2 @@
+ALTER TABLE `child_school`.`person`  ADD COLUMN `create_date` DATETIME DEFAULT CURRENT_TIMESTAMP AFTER `last_login_date`;
+ALTER TABLE `child_school`.`class_subject` ADD COLUMN `ins_yn` TINYINT(1) NULL DEFAULT 1 AFTER `teacher_id`;
