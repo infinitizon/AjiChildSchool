@@ -464,6 +464,7 @@ if(isset($_POST['pExam_sessions'])){
 }
 
 if(isset($_POST['printStud'])){
+    $table = "";
     $sqlGetexamTypes = "SELECT distinct e.exam_type_id, exam_type_desc
                         FROM examinations e
                                 LEFT JOIN class_subject cs
@@ -486,15 +487,18 @@ if(isset($_POST['printStud'])){
             . " FROM session_term WHERE class_id=:class_id AND ius_yn<>1 AND session_nm = (SELECT session_nm FROM session_term WHERE session_term_id=:session_term_id) ";
     $params=array(":class_id"=>$_POST['class'], ":session_term_id"=>$_POST['curr_sess']);
     $otherTerms = $fxns->_execQuery($getOtherTerms, true, true, $params);
-    
+
+    $table .= var_dump($otherTerms);
     $countAllTerms = count($otherTerms)+1;
     $cummTotal = " (SELECT IFNULL(SUM(e.stud_score),0) FROM examinations e WHERE e.session_term_id IN (:session_term_id";
+    
+    $getStudentExam .= ", " . rtrim($termTotal, "+");
     foreach($otherTerms as $key => $vals){
 //        if($vals['term'] > $vals['curr_term']){
 //            if($printed){
 //
 //            }else{
-                $getStudentExam .= ", " . rtrim($termTotal, "+");
+//                $getStudentExam .= ", " . rtrim($termTotal, "+");
 //                $printed = true;
 //            }
 //        }
@@ -550,7 +554,7 @@ if(isset($_POST['printStud'])){
 
     $params=array(":person_id"=>$_POST['stud'], ":session_term_id"=>$_POST['curr_sess']);
     $student = $fxns->_execQuery($sqlGetStud, true, false, $params);
-    $table = "<div id='stud_sheet'>";
+    $table .= "<div id='stud_sheet'>";
     $table .= (($_COOKIE['teacher_type']==1)?"<div class='schoolTitle'><i class='fa fa-print fa-2x finalPrint'></i><div style='clear:both;'></div><br /><br />":"")
             . "<img src='{$student['pix']}' width='150' height='150' class='studPix' style='float:right;' />"
             . "<img src='/assets/images/logo.png' class='logo' />"

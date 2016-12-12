@@ -15,7 +15,7 @@ $C['DB_USER'] = 'root';
 /*
 * The database password
 */
-$C['DB_PASS'] =  ''; //	'acorn';	
+$C['DB_PASS'] =  'root'; //	'acorn';
 /*
 * The name of the database to work with
 */
