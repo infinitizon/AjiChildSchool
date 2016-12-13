@@ -633,18 +633,22 @@ class Functions extends DB_Connect {
 ";
             $return.= 'LOCK TABLES `'.$table.'` WRITE;'."\n";
             $return.= '/*!40000 ALTER TABLE `'.$table.'`  DISABLE KEYS */;'."\n";
+            $insert = 'INSERT INTO '.$table.' VALUES '; $ins_cnt = 0;
             for ($i = 0; $i < $num_fields; $i++){
                 while($row = $result->fetch()){
-                    $return.= 'INSERT INTO '.$table.' VALUES(';
+                    $insert.= '(';$ins_cnt++;
                     for($j=0; $j<$num_fields; $j++){
                         $row[$j] = addslashes($row[$j]);
                         $row[$j] = str_replace("\n","\\n",$row[$j]);
-                        if (isset($row[$j])) { $return.= '"'.$row[$j].'"' ; } else { $return.= '""'; }
-                        if ($j<($num_fields-1)) { $return.= ','; }
+                        if (isset($row[$j])) { $insert.= '"'.$row[$j].'"' ; } else { $insert.= '""'; }
+                        if ($j<($num_fields-1)) { $insert.= ','; }
                     }
-                    $return.= ");\n";
+                    $insert.= "),";
                 }
+//                $return .= substr($return, 0, strrpos($return, ','));
             }
+            $insert = rtrim($insert,',');
+            $return.= ($ins_cnt>0 ? $insert.";\n" : '');
             $return.= '/*!40000 ALTER TABLE `'.$table.'`  ENABLE KEYS */;'."\n";
             $return.= 'UNLOCK TABLES;'."\n";
             $return.="\n\n\n";

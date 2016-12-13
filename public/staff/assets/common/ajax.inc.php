@@ -520,7 +520,7 @@ if(isset($_POST['printStud'])){
     }
     $cummTotal .= ") AND e.class_subject_id=t.class_subject_id AND e.student_id=t.student_id)";
 //    $getStudentExam .= ($otherTerms[0]['curr_term']==3)?", ($total".rtrim($cummTotal, "+").")/{$countAllTerms} as 'CUMM. AVERAGE'":",'' as 'CUMM. AVERAGE'";
-    $getStudentExam .= ($otherTerms[0]['curr_term']==3)?", round ($cummTotal) as 'CUMM. AVERAGE'":",'' as 'CUMM. AVERAGE'";
+    $getStudentExam .= (@$otherTerms[0]['curr_term']==3)?", round ($cummTotal) as 'CUMM. AVERAGE'":",'' as 'CUMM. AVERAGE'";
 
     $getStudentExam .="from (SELECT e.exam_id, e.session_term_id, st.term, e.exam_type_id, e.class_subject_id, e.student_id, e.stud_score, e.max_score
                                 , cs.class_id, cs.subject_id, cs.teacher_id, lov.val_dsc
